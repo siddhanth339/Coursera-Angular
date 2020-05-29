@@ -1,7 +1,6 @@
 <div class="container" fxLayout = "row" fxLayout.sm = "column" fxLayout.xs = "column" fxLayoutAlign.gt-md = "space-around center" fxLayoutGap = "10px">
   <mat-card *ngIf = "dish" fxFlex>
     <mat-card-header>
-      
       <mat-card-title>
         <h3>{{ dish.name | uppercase }}</h3>
       </mat-card-title>
@@ -11,6 +10,9 @@
       <p> {{ dish.description }}</p>
     </mat-card-content>
   </mat-card>
+  <div [hidden]="dish">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait!</h4>
+  </div>
 
   <mat-card *ngIf="promotion" fxFlex>
     <mat-card-header>
@@ -24,6 +26,9 @@
       </p>
     </mat-card-content>
   </mat-card>
+  <div [hidden]="promotion">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait!</h4>
+  </div>
   
   <mat-card *ngIf = "leader" fxFlex>
     <mat-card-header>
@@ -37,4 +42,7 @@
       <p>{{leader.description}}</p>
     </mat-card-content>
   </mat-card>
+  <div [hidden]="leader">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait!</h4>
+  </div>
 </div>
