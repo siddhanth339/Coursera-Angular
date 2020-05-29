@@ -13,6 +13,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';  
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import 'hammerjs';
 import { DishService } from './services/dish.service';
@@ -52,9 +55,12 @@ import { LoginComponent } from './login/login.component';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
+    MatSelectModule,
+    MatSlideToggleModule,
     AppRoutingModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
 
   ],
   entryComponents: [LoginComponent], /* enables the LoginComponent to be displayed on top of the view*/
